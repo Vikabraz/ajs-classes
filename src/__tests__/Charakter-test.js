@@ -1,4 +1,4 @@
-import Charakter from "./Charakter";
+import Charakter from "../Charakter";
 
 test("name long", () => {
   expect(() => new Charakter("veryLongName", "Undead")).toThrow(
