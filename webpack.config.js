@@ -1,13 +1,12 @@
-const path = require('path');
-
 module.exports = {
-  entry: './src/index.js',
+  entry: "./src/index.js",
+  output: {
+    path: __dirname + "/dist",
+    filename: "index_bundle.js",
+  },
 
   module: {
-    rules: [{ test: /\.(js)$/, use: 'babel-loader' }],
+    rules: [],
   },
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'index_bundle.js',
-  },
+  plugins: [],
 };

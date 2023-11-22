@@ -1,5 +1,3 @@
-import Bowman from "./Bowman";
+import Bowman from './Bowman';
 
-const pers = new Bowman("pers", "Bowman");
-
-console.log(pers);
+const pers = new Bowman('pers', 'Bowman');

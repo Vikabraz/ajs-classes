@@ -11,16 +11,19 @@ test("name short", () => {
 });
 
 test("name norm", () => {
-  const received = new Charakter("normName", "Undead");
-  expect(() => received).toBe("normName", "Undead");
+  expect(new Charakter("normName", "Undead").name).toBe("normName");
 });
 
-test.each(["Bowerman", "Swordsman", "Magician", "Daemon", "Undead", "Zombie"])(
+test.each(["Bowman", "Swordsman", "Magician", "Deamon", "Undead", "Zombie"])(
   "test pers with type %s ",
-  (expected) => {
-    expect(new Charakter("normName", expected).toBe(expected));
+  (type) => {
+    expect(new Charakter("normName", type).type).toBe(type);
   }
 );
+
+test("other type", () => {
+  expect(() => new Charakter("xxx", "mag")).toThrow("фигня какая-то");
+});
 
 test("levelUp alive pers", () => {
   const pers = new Charakter("normName", "Undead");
@@ -29,10 +32,10 @@ test("levelUp alive pers", () => {
   pers.attack = 25;
   pers.defence = 25;
   pers.levelUp();
-  expect(pers.health).ToBe(100);
-  expect(pers.level).ToBe(2);
-  expect(pers.attack).ToBe(30);
-  expect(pers.defence).ToBe(30);
+  expect(pers.health).toBe(100);
+  expect(pers.level).toBe(2);
+  expect(pers.attack).toBe(30);
+  expect(pers.defence).toBe(30);
 });
 
 test("levelUp dead pers", () => {
@@ -46,7 +49,7 @@ test("damage alive pers", () => {
   pers.health = 50;
   pers.defence = 20;
   pers.damage(10);
-  expect(pers.health).ToBe(42);
+  expect(pers.health).toBe(42);
 });
 
 test("damage dead pers", () => {

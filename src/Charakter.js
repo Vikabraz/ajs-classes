@@ -35,5 +35,3 @@ export default class Charakter {
     this.health -= points * (1 - this.defence / 100);
   }
 }
-
-// @babel/core @babel/cli @babel/preset-env webpack webpack-cli babel-loader jest babel-jest eslint

@@ -1,7 +1,7 @@
 import Deamon from "../Deamon";
 
 test("make Deamon", () => {
-  const pers = new Deamon("Dname", "Deamon");
+  const pers = new Deamon("Dname");
   expect(pers).toEqual({
     name: "Dname",
     type: "Deamon",

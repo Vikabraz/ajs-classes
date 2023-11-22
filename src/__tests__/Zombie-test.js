@@ -1,10 +1,10 @@
-import Zombie from '../Zombie';
+import Zombie from "../Zombie";
 
-test('make Zombie', () => {
-  const pers = new Zombie('Zname', 'Zombie');
+test("make Zombie", () => {
+  const pers = new Zombie("Zname");
   expect(pers).toEqual({
-    name: 'Zname',
-    type: 'Zombie',
+    name: "Zname",
+    type: "Zombie",
     health: 100,
     level: 1,
     attack: 40,

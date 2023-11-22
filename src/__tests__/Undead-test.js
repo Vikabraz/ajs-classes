@@ -1,10 +1,10 @@
-import Undead from '../Undead';
+import Undead from "../Undead";
 
-test('make Undead', () => {
-  const pers = new Undead('Uname', 'Undead');
+test("make Undead", () => {
+  const pers = new Undead("Uname");
   expect(pers).toEqual({
-    name: 'Uname',
-    type: 'Undead',
+    name: "Uname",
+    type: "Undead",
     health: 100,
     level: 1,
     attack: 25,

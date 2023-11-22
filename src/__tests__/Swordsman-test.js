@@ -1,10 +1,10 @@
-import Swordsman from '../Swordsman';
+import Swordsman from "../Swordsman";
 
-test('make Swordsman', () => {
-  const pers = new Swordsman('Sname', 'Swordsman');
+test("make Swordsman", () => {
+  const pers = new Swordsman("Sname");
   expect(pers).toEqual({
-    name: 'Sname',
-    type: 'Swordsman',
+    name: "Sname",
+    type: "Swordsman",
     health: 100,
     level: 1,
     attack: 40,
